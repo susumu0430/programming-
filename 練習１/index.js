@@ -1,6 +1,9 @@
 'use strict';
 
-let unko = "Hello World";
+const inoki = ['いーち','にーい','さーん','ダー！！'];
 
-unko = "Hello World2";
-console.log(unko);
+let index = 0;
+while(index < inoki.length) {
+    console.log(inoki[index]);
+  index++;
+}
