@@ -33,5 +33,5 @@ const test2 = {
 
 // console.log(document.getElementsByTagName("button")[1]);
 document.getElementsByTagName("button")[0].addEventListener("click",() => {
-    window.alert("Hi");
+    window.alert("Hy");
 });
