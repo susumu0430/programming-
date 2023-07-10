@@ -1,37 +1,47 @@
 'use strict';
 
-const inoki = ['いーち','にーい','さーん','ダー！！'];
+const question = 'ゲーム市場、最も売れたゲーム機は次の内どれ？';
+const answers = [
+    'スーパーファミコン',
+    'プレイステーション２','ニンテンドースイッチ',
+    'ニンテンドーDS'
+];
+const correct = 'ニンテンドーDS';
 
-// let index = 0;
-// while(index < inoki.length) {
-//     console.log(inoki[index]);
-//   index++;
-// }
+console.log();
+document.getElementById('js-question').textContent = question;
 
-// if(inoki.length > 4) {
-//   console.log("ボンバイエ！");
-// } else {
-//     console.log("ボンバ！");
-// }
+const $button = document.getElementsByTagName('button');
+$button[0].textContent = answers[0];
+$button[1].textContent = answers[1];
+$button[2].textContent = answers[2];
+$button[3].textContent = answers[3];
 
-const test = (arg) => {
-    if(inoki.length > arg) {
-        console.log("ボンバイエ！");
-      } else {
-          console.log("ボンバ！");
-      }
-};
-
-const test2 = {
-    color: "pink",
-    size: "large",
-    purfume:"mint",
-    goTo: () => {
-        console.log("Hello");
-    }
-};
-
-// console.log(document.getElementsByTagName("button")[1]);
-document.getElementsByTagName("button")[0].addEventListener("click",() => {
-    window.alert("Hy");
+$button[0].addEventListener('click',() => {
+  if(correct === $button[0].textContent) {
+    window.alert('正解');
+  } else {
+    window.alert('不正解');
+  }
 });
+$button[1].addEventListener('click',() => {
+    if(correct === $button[1].textContent) {
+      window.alert('正解');
+    } else {
+      window.alert('不正解');
+    }
+  });
+  $button[2].addEventListener('click',() => {
+    if(correct === $button[2].textContent) {
+      window.alert('正解');
+    } else {
+      window.alert('不正解');
+    }
+  });
+  $button[3].addEventListener('click',() => {
+    if(correct === $button[3].textContent) {
+      window.alert('正解');
+    } else {
+      window.alert('不正解');
+    }
+  });
