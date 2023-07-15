@@ -6,6 +6,7 @@ const $doc = document;
 const $tab = $doc.getElementById('js-tab');
 const $nav = $tab.querySelectorAll("[data-nav]");
 const $content = $tab.querySelectorAll("[data-content]");
+const ACTIVE_CLASS= 'is-active';
 //初期化
 const init = () => {
     $content[0].style.display = "block";
@@ -24,12 +25,14 @@ const handleClick = (e) => {
 let index =0;
 while(index < $nav.length){
     $content[index].style.display ="none";
+    $nav[index].classList.remove(ACTIVE_CLASS);
     index++;
 }
 
 //対象のコンテンツをアクティブ化
 $tab.querySelectorAll('[data-content="' + targetVal + '"]')[0].style.display = 'block';
-$nav[targetVal].classList.add('is-active');
+$nav[targetVal].classList.add(ACTIVE_CLASS);
+
 console.log('$nav[targetVal].classList',$nav[targetVal].classList);
 };
 
