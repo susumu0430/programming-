@@ -50,5 +50,11 @@
         tagName: 'a'
     });
 
+    const miniAccordion = new Accordion({
+        hookName: '#js-accordion-mini',
+        tagName: 'dt'
+    });
+
+
 
 })();
