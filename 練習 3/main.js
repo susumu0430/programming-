@@ -16,8 +16,15 @@
             while (index <  $triggerLen) {
              $trigger[index].addEventListener('click', (e) => this.clickHandler(e));
              index++;
-            }         
+            }
+            this.action();        
         }
+
+        action (){
+            console.log('Hello')
+        };
+
+
        //クリックしたら実行される
         clickHandler(e) {
             e.preventDefault();
@@ -36,6 +43,11 @@
     const fuckingAccordion = new Accordion({
         hookName: '#js-faq',
         tagName: 'p'
+    });
+
+    const dummyAccordion = new Accordion({
+        hookName: '#js-accordion',
+        tagName: 'a'
     });
 
 
