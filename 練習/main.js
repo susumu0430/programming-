@@ -1,22 +1,10 @@
-'use strict';
 
-// const obj1 = {
-//     name: "健",
-//     age: 24,
-// };
-// console.log(obj1);
-
-// const obj1 = {
-//     name:"亮太",
-//     age: 24,
-// };
-// obj1.name ="Nushida";
-// console.log(obj1);
-
-const obj1 ={
-    name:"涼",
-    age: 24,
+const myPyofile = {
+    name:"じゃんけぇ",
+    age: 28,
 };
-obj1.name = "Nushida";
-obj1.address ="Tokyo";
-console.log(obj1);
+const message1 =`名前は${myPyofile.name}です。年齢は${myPyofile.age}歳です`;
+console.log(message1);
+const { name, age } = myPyofile;
+const message2 =`名前は${name}です。年齢は${age}歳です`;
+console.log(message2);
