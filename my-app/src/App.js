@@ -40,4 +40,4 @@ const handleClear = () => {
   );
 }
 
-export default App;
+export default App
