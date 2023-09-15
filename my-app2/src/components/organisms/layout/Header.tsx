@@ -1,7 +1,8 @@
 import {memo,FC} from"react";
-import {Box,Flex,Heading,Link ,Drawer,DrawerOverlay,DrawerBody,Button,DrawerContent,useDisclosure}from"@chakra-ui/react"
+import {Box,Flex,Heading,Link ,useDisclosure}from"@chakra-ui/react"
 
 import { MenulconButton } from "../../atoms/button/MenulconButton";
+import { MenuDrawer } from "../../molecules/MenuDrawer";
 
 
 
@@ -21,23 +22,7 @@ export const Header :FC=memo(()=> {
         </Flex>
         <MenulconButton onOpen={onOpen} />
         </Flex>
-        <Drawer placement="left" size="xs" onClose={onClose} isOpen={isOpen}>
-            <DrawerOverlay>
-                <DrawerContent>
-                <DrawerBody p={0} bg="gray.100">
-                    <Button w="100%">
-                        TOP
-                    </Button>
-                    <Button w="100%">
-                        ユーザー一覧
-                    </Button>
-                    <Button w="100%">
-                        設定
-                    </Button>
-                </DrawerBody>
-                </DrawerContent> 
-            </DrawerOverlay>
-        </Drawer>
+        <MenuDrawer onClose={onClose} isOpen={isOpen}/>
         </>
     )
 });
