@@ -22,10 +22,10 @@ export const Router:FC =memo(()=>{
                     ))}
                 </Switch>
             )}/>
+            </LoginUserProvider>
             <Route path="*">
                 <Page404 />
             </Route>
-            </LoginUserProvider>
         </Switch>
     )
 })
