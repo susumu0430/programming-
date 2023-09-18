@@ -38,4 +38,4 @@ export const UserDetailModal :FC<Props>=memo((props)=> {
             </ModalContent>
         </Modal>
     )
-})
+    })
