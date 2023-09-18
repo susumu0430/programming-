@@ -5,13 +5,16 @@ import { Center, Spinner,  Wrap, WrapItem, useDisclosure } from "@chakra-ui/reac
 import { UserCard } from "../organisms/user/UserCard";
 import { useAllUsers }from "../../hooks/useAllUsers"
 import { UserDetailModal } from "../organisms/user/UserDetailModal";
+import { useSelectUser } from "../../hooks/useSelectUser";
 
 export const UserManagement :FC=memo(()=> {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const {getUsers, users ,loading} = useAllUsers()
+    const {onSelectUser, selectedUser} =useSelectUser()
+   
 
 useEffect(() => getUsers(),[]);
-const onClickUser = useCallback(() => onOpen(),[]);   
+const onClickUser = useCallback((id: number) => {console.log(id); onSelectUser({id, users, onOpen}); },[users]);   
     return(
         <>
         {loading ?(
@@ -22,12 +25,12 @@ const onClickUser = useCallback(() => onOpen(),[]);
             <Wrap p={{ base: 4, md: 10 }}>
                 {users.map((user) => (
                <WrapItem key={user.id} mx="auto">
-               <UserCard imageUrl="https://source.unsplash.com/random" userName={user.username} fullName={user.name} onClick={onClickUser}/>
+               <UserCard id={user.id} imageUrl="https://source.unsplash.com/random" userName={user.username} fullName={user.name} onClick={onClickUser}/>
                </WrapItem> 
                 ))}
          </Wrap>
         ) }
-        <UserDetailModal isOpen={isOpen} onClose={onClose}/>
+        <UserDetailModal user={selectedUser} isOpen={isOpen} onClose={onClose}/>
         </>
     )
 })
