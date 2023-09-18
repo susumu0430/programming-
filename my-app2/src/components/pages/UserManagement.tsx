@@ -14,7 +14,7 @@ export const UserManagement :FC=memo(()=> {
    
 
 useEffect(() => getUsers(),[]);
-const onClickUser = useCallback((id: number) => {console.log(id); onSelectUser({id, users, onOpen}); },[users]);   
+const onClickUser = useCallback((id: number) => {console.log(id); onSelectUser({id, users, onOpen}); },[users, onSelectUser, onOpen]);   
     return(
         <>
         {loading ?(
