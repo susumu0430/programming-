@@ -4,7 +4,7 @@ import { auth, provider } from '../firebase'
 import { useNavigate } from"react-router-dom"
 
 const Login =({setIsAuth}) => {
-const navigate = useNavigate() 
+const navigate = useNavigate()
 const loginInWithGoogle = () => {
   //Googleでログイン
   signInWithPopup(auth, provider).then((result) => {
