@@ -37,7 +37,7 @@ function Sidebar() {
         {/* sidebarOption */}
 
         {/* ツイッターボタン */}
-        <Button variant='outlined' className='sidebar_tweet'>ツイートする</Button>
+        <Button variant='outlined' className='sidebar_tweet' fullWidth>ツイートする</Button>
         </div>
   )
 }

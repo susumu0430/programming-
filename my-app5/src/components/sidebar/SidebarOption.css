@@ -3,6 +3,7 @@
     align-items: center;
     cursor: pointer;
     transition: color 0.15s ease-out;
+    margin-left: 20px;
 }
 
 .SidebarOption:hover {

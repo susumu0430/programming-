@@ -6,7 +6,11 @@
 
 .post_body {
     flex: 1;
-    padding: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .post_body > img {
@@ -42,5 +46,5 @@
 }
 
 .post_avatar {
-    padding: 20px;
+    padding: 15px;
 }
