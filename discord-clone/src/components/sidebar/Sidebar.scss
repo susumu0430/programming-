@@ -1,7 +1,8 @@
 .sidebar {
     display: flex;
-    flex: 0.35;
+    flex: 0.3;
     height: 100vh;
+    // background-color: #36393f;
 
     .sidebarLeft {
         display: flex;
@@ -13,7 +14,7 @@
     .serverIcon {
         width: 60px;
         height: 60px;
-        background-color: gray;
+        background-color: #36393f;
         border-radius: 9999px;
         margin-bottom: 10px;
         position: relative;
@@ -30,6 +31,77 @@
     }
 
     .sidebarRight {
-        background-color: #364261;
+        background-color: #5c6a92;
+        width: 300px;
+        position: relative;
+        flex-grow: 1;
+
+        .sidebarTop {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .sidebarChannels {
+            padding: 13px;
+
+            .sidebarChannelsHeader{
+                display: flex;
+                color: white;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 5px;
+
+                .sidebarHeader {
+                    display: flex;
+                }
+                .sidebarAddIcon {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .sidebarFooter {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 93%;
+            padding: 10px;
+            border-top: 1px solid #24272d;
+            padding-top: 10px;
+            margin-left: -3px;
+
+        .sidebarAccount {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 60px;
+            }
+
+            .accountName {
+                margin-left: 5px;
+
+                h4 {
+                    color: white;
+                    font-weight: 500;
+                }
+
+                span {
+                    color: #292f3e;
+                }
+            }
+        }    
+        }
+
+        .sidebarVoice {
+            display: flex;
+            align-items: center;
+            color:#4c4d50;
+        }
     }
 }
