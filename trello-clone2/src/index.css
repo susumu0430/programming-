@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 45px;
+    color: aliceblue;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px black;
+}
+
+header {
+    text-align: center;
+    padding: 4px 10%;
+    margin-bottom: 50px;
+    background-color: rgb(102, 94,74);
+}
+
+.app {
+    background: url(../src/images/mountain.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
