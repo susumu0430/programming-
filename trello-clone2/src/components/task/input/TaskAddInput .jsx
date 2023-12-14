@@ -4,20 +4,28 @@ export const TaskAddInput  = ({
   inputText,
   setInputText,
   setTaskList,
-  tasList
+  taskList
 }) => {
 
 const handleSubmit = (e) => {
   e.preventDefault()
-  /* カードを追加する */
-  setTaskList([...tasList,
-  {
-    text: inputText,
+  if(inputText ==="") {
+    return;
   }
+  /* カードを追加する */
+  setTaskList([
+    ...taskList,
+  {
+    id: taskList.length,
+    draggableId:`task-$(taskList.length)`,
+    text: inputText,
+  },
 ])
+setInputText("")
 }
 
 const handleChange = (e) => {
+
   setInputText(e.target.value)
 }
   return (
