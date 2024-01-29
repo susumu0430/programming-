@@ -4,7 +4,18 @@ const userRoute = require("./routes/users")
 const authRoute = require("./routes/auth")
 const postRoute = require("./routes/posts")
 const PORT = 3000;
+const mongoose = require("mongoose")
 
+//データベース接続
+mongoose.connect(
+    "mongodb+srv://susumu04301125:dj33s0ix68OE6ZG@cluster0.0iuqew0.mongodb.net/realsns?retryWrites=true&w=majority"
+).then(() => {
+    console.log("DBと接続中・・・")
+    
+})
+ .catch((err) => {
+    console.log(err)
+})
 
 //ミドルウェア
 app.use("/api/users",userRoute)
