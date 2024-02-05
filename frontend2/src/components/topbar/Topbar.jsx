@@ -15,7 +15,7 @@ export default function Topbar() {
           <div className="topbarIconItem">1</div>
           <div className="topbarIconItem">2</div>
         </div>
-        <img src="/assets/person /1.jpeg" alt="" className='topbarImg'/>
+        <img src="/assets/person/1.jpeg" alt="" className='topbarImg'/>
     </div>
   )
 }
