@@ -4,8 +4,8 @@ import { Users } from"../../dummyData"
 import Online from '../online/Online'
 
 
-export default function Rightbar({ profile }) {
-
+export default function Rightbar({ user }) {
+  const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
   const HomeRightbar = () => {
     return (
       <>
@@ -43,27 +43,27 @@ export default function Rightbar({ profile }) {
       <h4 className='rightbarTitle'>あなたの友達</h4>
       <div className='rightbarFollowings'>
         <div className="rightbarFollowing">
-          <img src="assets/person/1.jpeg" alt="" className='rightbarFollowingImg'/>
+          <img src={PUBLIC_FOLDER + "/person/1.jpeg"} alt="" className='rightbarFollowingImg'/>
           <span className="rightbarFollowingName">Shin</span>
         </div>
         <div className="rightbarFollowing">
-          <img src="assets/person/2.jpeg" alt="" className='rightbarFollowingImg'/>
+          <img src={PUBLIC_FOLDER + "/person/2.jpeg"} alt="" className='rightbarFollowingImg'/>
           <span className="rightbarFollowingName">Tanaka</span>
         </div>
         <div className="rightbarFollowing">
-          <img src="assets/person/3.jpeg" alt="" className='rightbarFollowingImg'/>
+          <img src={PUBLIC_FOLDER + "/person/3.jpeg"} alt="" className='rightbarFollowingImg'/>
           <span className="rightbarFollowingName">Takeda</span>
         </div>
         <div className="rightbarFollowing">
-          <img src="assets/person/4.jpeg" alt="" className='rightbarFollowingImg'/>
+          <img src={PUBLIC_FOLDER + "/person/4.jpeg"} alt="" className='rightbarFollowingImg'/>
           <span className="rightbarFollowingName">yamada</span>
         </div>
         <div className="rightbarFollowing">
-          <img src="assets/person/5.jpeg" alt="" className='rightbarFollowingImg'/>
+          <img src={PUBLIC_FOLDER +"/person/5.jpeg"} alt="" className='rightbarFollowingImg'/>
           <span className="rightbarFollowingName">koga</span>
         </div>
       </div>
-      </div>  
+      </div>
       </>
     )
   }
@@ -71,7 +71,7 @@ export default function Rightbar({ profile }) {
   return (
     <div className='rightbar'>
     <div className='rightbarWrapper'>
-      {profile ? <ProfileRightbar/> : <HomeRightbar/>}
+      {user ? <ProfileRightbar/> : <HomeRightbar/>}
     </div>
    </div>
   )
