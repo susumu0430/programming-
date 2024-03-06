@@ -36,10 +36,11 @@ export default function Share() {
         <hr className='shareHr'/>
         <form className="shareButtons" onSubmit={(e) => handleSubmit(e)}>
             <div className='shareOptions'>
-                <div className="shareOption">
+                <label className="shareOption" htmlFor="file">
                     <Image className='shareIcon' htmlColor='blue'/>
                     <span className="shareOptionText">写真</span>
-                </div>
+                    <input type="file" id="file" accept=".png, .jpeg, .jpg" style={{ display: "none" }}/>
+                </label>
                 <div className="shareOption">
                     <Gif className='shareIcon' htmlColor='hotpink'/>
                     <span className="shareOptionText">GIF</span>
