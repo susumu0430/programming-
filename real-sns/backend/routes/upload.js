@@ -2,7 +2,7 @@
 // const User = require("../models/User")
 
 const router = require("express").Router();
-const Image = require("../models/Image");
+// const Image = require("../models/Image");
 const multer = require("multer");
 // const fs = require("fs");
 // const path = require("path");
