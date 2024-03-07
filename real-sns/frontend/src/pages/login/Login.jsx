@@ -22,7 +22,7 @@ export default function Login() {
         dispatch
         )
     }
-    console.log(user)
+    console.log(user)//ユーザがログインしてる状態
 
   return (
     <div className='login'>

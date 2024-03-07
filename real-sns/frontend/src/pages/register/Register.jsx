@@ -8,6 +8,7 @@ export default function Register() {
     const email = useRef()
     const password = useRef()
     const passwordConfirmation = useRef()
+    
     const navigate = useNavigate()
 
     const handleSubmit = async(e) => {
